@@ -18,6 +18,12 @@ console.log(document.getElementsByClassName("btn")); // HTML collection
 /*********  Creating and inserting elements ********/
 const message = document.createElement("div");
 message.classList.add("cookie-message");
+
+// 應使用 textContent 優先於 innerText
+// innerText 是一個代表節點及其後代之「已渲染」（rendered）文字內容的屬性。
+// textContent 屬性表示了節點或其後代的文字內容。
+// innerText 取得的是被 CSS 調整過樣式後渲染的文字；textContent 則是實際取得節點中的文字內容。
+
 // message.textContent = 'We use cookied for improved functionality and analytics.';
 message.innerHTML =
   'We use cookied for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
